@@ -222,6 +222,4 @@ set CAMPUS_PASS=your_password
 
 ---
 
-# License
 
-MIT License
