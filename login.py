@@ -6,16 +6,16 @@ import requests
 from playwright.sync_api import TimeoutError as PWTimeout
 from playwright.sync_api import sync_playwright
 
-PORTAL = os.environ.get("CAMPUS_PORTAL", "http://172.16.54.18/")
+PORTAL = os.environ.get("CAMPUS_PORTAL", "http://172.16.54.18/eportal/")
 USER = os.environ.get("CAMPUS_USER", "").strip()
 PASS = os.environ.get("CAMPUS_PASS", "").strip()
-ISP = os.environ.get("CAMPUS_ISP", "绉诲姩").strip()  # 鐢典俊/绉诲姩/鑱旈€?鏍″洯缃?
+ISP = os.environ.get("CAMPUS_ISP", "绉诲姩").strip()  
 
-# 鏂綉宸℃鐩稿叧锛堝彲鐢ㄧ幆澧冨彉閲忚鐩栵級
-CHECK_INTERVAL_SEC = int(os.environ.get("CAMPUS_CHECK_INTERVAL", "60"))  # 姣?0绉掓鏌ヤ竴娆?
-MONITOR_SECONDS = int(os.environ.get("CAMPUS_MONITOR_SECONDS", "0"))  # 0=鍙窇涓€娆★紱>0=杩愯N绉掑悗閫€鍑?
-RETRY_TIMES = int(os.environ.get("CAMPUS_RETRY_TIMES", "3"))  # 鍗曟鎺夌嚎鏈€澶氶噸璇?娆?
-RETRY_BACKOFF_SEC = int(os.environ.get("CAMPUS_RETRY_BACKOFF", "3"))  # 閲嶈瘯闂撮殧閫掑鍩烘暟
+
+CHECK_INTERVAL_SEC = int(os.environ.get("CAMPUS_CHECK_INTERVAL", "60"))  
+MONITOR_SECONDS = int(os.environ.get("CAMPUS_MONITOR_SECONDS", "0"))  
+RETRY_TIMES = int(os.environ.get("CAMPUS_RETRY_TIMES", "3"))  
+RETRY_BACKOFF_SEC = int(os.environ.get("CAMPUS_RETRY_BACKOFF", "3"))  
 
 
 def is_online() -> bool:
