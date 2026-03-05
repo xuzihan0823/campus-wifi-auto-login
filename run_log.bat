@@ -2,9 +2,9 @@
 chcp 65001 >nul
 cd /d %~dp0
 
-set CAMPUS_USER=2510631109
-set CAMPUS_PASS=08230837
-set CAMPUS_ISP=移动
+set CAMPUS_USER=你的学号
+set CAMPUS_PASS=密码
+set CAMPUS_ISP=运营商
 set CAMPUS_PORTAL=http://172.16.54.18/
 
 REM 睡眠唤醒后建议短时巡检（默认5分钟）
